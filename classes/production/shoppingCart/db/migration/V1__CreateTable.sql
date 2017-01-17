@@ -1,0 +1,16 @@
+CREATE TABLE `products` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `stockNumber` VARCHAR(45) NOT NULL,
+  `description` VARCHAR(255) NULL,
+  `rating` INT NULL DEFAULT NULL,
+  `reviewCount` INT NULL,
+  `listPrice` DECIMAL(45) NOT NULL,
+  `perDiscount` INT NOT NULL DEFAULT 0,
+  `actualPrice` DECIMAL(45) NOT NULL,
+  `quantity` INT NOT NULL DEFAULT 0,
+  `isAdult` BOOLEAN NOT NULL,
+  `version` INT(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC),
+  UNIQUE INDEX `stockNumber_UNIQUE` (`stockNumber` ASC));
